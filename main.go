@@ -26,7 +26,7 @@ func main() {
 	anniversarySinceMet := strconv.Itoa(int(tNow.Sub(t1).Hours() / 24))
 	anniversarySinceStartRelationship := strconv.Itoa(int(tNow.Sub(t2).Hours() / 24))
 	// テキストメッセージを生成する
-	message := linebot.NewTextMessage(anniversarySinceMet + anniversarySinceStartRelationship)
+	message := linebot.NewTextMessage(anniversarySinceMet + " days since met, " + anniversarySinceStartRelationship + " days since started dating")
 	// テキストメッセージを友達登録しているユーザー全員に配信する
 	if _, err := bot.BroadcastMessage(message).Do(); err != nil {
 		log.Fatal(err)
