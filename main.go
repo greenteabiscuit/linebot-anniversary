@@ -20,8 +20,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	t1 := time.Date(2018, time.February, 28, 12, 0, 0, 0, time.UTC)
-	t2 := time.Date(2018, time.March, 31, 12, 0, 0, 0, time.UTC)
+	t1 := time.Date(2018, time.February, 28, 0, 0, 0, 0, time.UTC)
+	t2 := time.Date(2018, time.March, 4, 0, 0, 0, 0, time.UTC)
 	tNow := time.Now()
 	anniversarySinceMet := strconv.Itoa(int(tNow.Sub(t1).Hours() / 24))
 	anniversarySinceStartRelationship := strconv.Itoa(int(tNow.Sub(t2).Hours() / 24))
