@@ -29,4 +29,20 @@ func main() {
 	if _, err := bot.BroadcastMessage(message).Do(); err != nil {
 		log.Fatal(err)
 	}
+
+	var monthlyMessage string
+	switch tNow.Month() {
+	case 2:
+		monthlyMessage = "bought TT's Valentine present? Valentine's is on Feb. 14th"
+	case 10:
+		monthlyMessage = "bought TT's birthday present? Her birthday is on Oct. 9th"
+	case 12:
+		monthlyMessage = "bought TT's Christmas present? Christmas is on Dec. 24th"
+	}
+
+	monthlyLineMessage := linebot.NewTextMessage(monthlyMessage)
+
+	if _, err := bot.BroadcastMessage(monthlyLineMessage).Do(); err != nil {
+		log.Fatal(err)
+	}
 }
