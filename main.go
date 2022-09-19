@@ -34,6 +34,8 @@ func main() {
 	switch tNow.Month() {
 	case 2:
 		monthlyMessage = "bought TT's Valentine present? Valentine's is on Feb. 14th"
+	case 5:
+		monthlyMessage = "bought TT's 520 present? Valentine's is on May 20th"
 	case 10:
 		monthlyMessage = "bought TT's birthday present? Her birthday is on Oct. 9th"
 	case 12:
